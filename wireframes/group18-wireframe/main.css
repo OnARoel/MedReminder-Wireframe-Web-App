@@ -1,0 +1,791 @@
+* {
+	font-family: "Open Sans";
+}
+
+/*index.html*/
+/*
+body { 
+    background-size: 103px 103px;
+    background-image: linear-gradient(to right, #0596CC 1px, transparent 1px), linear-gradient(to bottom, #7AA936 1px, transparent 1px);
+}
+*/
+.whole-tool-bar{
+	background: #46494C;
+	width: 100%;
+	height: 110px;
+}
+
+.toolbar {
+	position: relative;
+	right: -200px;
+}
+
+.login-signup-logo {
+	position: relative;
+	top: 60px;
+}
+
+.login-signup-card {
+	margin: auto;
+	height: 250px;
+    width: 250px;
+    top: 55px;
+    align-items: center;
+}
+
+.login-button.login-signup {
+	color: #FFFFFF;
+	background-color: #0596CC;
+	letter-spacing: 1px;
+	border-color: #0596CC;
+	border-radius: 500px;
+	position: relative;
+	top: 80px;
+	font-size: 16px;
+}
+
+.login-button.login-signup:hover {
+	color: #0596CC;
+	background: #FFFFFF;
+	border-color: #0596CC;
+}
+
+.signup-button.login-signup {
+	color: #FFFFFF;
+	background: #7AA936; 
+	letter-spacing: 1px;
+	border-color: #7AA936;
+	border-radius: 500px;
+	position: relative;
+	top: 165px;
+	font-size: 16px;
+}
+
+.signup-button.login-signup:hover {
+	color: #7AA936;
+	background: #FFFFFF;
+	border-color: #7AA936;
+}
+
+.footer {
+	position: absolute;
+	top: 275px;
+	font-size: 12px;
+}
+
+/*login and signup modal*/
+
+#close-login {
+	position: relative;
+	top: 10px;
+	right: 10px;
+}
+
+.uk-modal-title.login {
+	color: #0596CC;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.uk-modal-title.signup {
+	color: #7AA936;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+
+.login-button.login {
+	color: #FFFFFF;
+	background-color: #0596CC;
+	letter-spacing: 1px;
+	border-color: #0596CC;
+	border-radius: 500px;
+	position: relative;
+	top: 250px;
+	font-size: 16px;
+}
+
+.login-button.login:hover {
+	color: #0596CC;
+	background: #FFFFFF;
+	border-color: #0596CC;
+}
+
+.uk-input {
+	border-radius: 500px;
+}
+
+.uk-modal-dialog {
+	height: 350px;
+	width: 300px;
+}
+
+.forgotpass {
+	position: relative;
+	top: 60px;
+}
+
+.uk-modal-body {
+	position: relative;
+	top: 125px;
+}
+
+.uk-modal-body.signup {
+	height: 375px;
+	width: 600px;
+}
+
+.firstname-signup {
+	position: relative;
+	left: 30px;
+	top: 150px;
+}
+
+.lastname-signup {
+	position: relative;
+	right: 30px;
+	top: 150px;
+}
+
+.email-signup {
+	position: relative;
+	left: 30px;
+	bottom: 115px;
+}
+
+.password-signup {
+	position: relative;
+	right: 30px;
+	bottom: 115px;
+}
+
+.signup-button.signup {
+	position: relative;
+	color: #FFFFFF;
+	background: #7AA936; 
+	letter-spacing: 1px;
+	border-color: #7AA936;
+	border-radius: 500px;
+	position: relative;
+	top: 255px;
+	font-size: 16px;
+}
+
+.signup-button.signup:hover {
+	color: #7AA936;
+	background: #FFFFFF;
+	border-color: #7AA936;
+}
+
+.signup-agreement {
+	color: #46494C;
+	position: relative;
+	top: 210px;
+}
+
+/*homepage.html*/
+
+.daily-reminder {
+	position: relative;
+	bottom: 190px;
+	height: 300px;
+	width: 800px;
+	bottom: 300px;
+}
+
+.uk-card-title.homepage {
+	color: #46494C;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.homepage-logo {
+	position: absolute;
+	left: 50px;
+}
+
+.uk-navbar-container {
+	height: 105px;
+}
+
+.homepage-schedule-button {
+	background-color: #0596CC;
+	letter-spacing: 1px;
+	border-color: #0596CC;
+	border-radius: 500px;
+	position: relative;
+	top: 100px;
+	left: 355px;
+	width: 300px;
+	font-size: 16px;
+	color: #FFFFFF;
+}
+
+.homepage-list-button {
+	position: relative;
+	color: #FFFFFF;
+	background: #7AA936; 
+	letter-spacing: 1px;
+	border-color: #7AA936;
+	border-radius: 500px;
+	position: relative;
+	top: 100px;
+	left: 490px;
+	font-size: 16px;
+}
+
+.homepage-schedule-button:hover {
+	color: #0596CC;
+	background: #FFFFFF;
+	border-color: #0596CC;
+}
+
+.homepage-list-button:hover {
+	color: #7AA936;
+	background: #FFFFFF;
+	border-color: #7AA936;
+}
+
+#cal-icon-hp {
+	position: relative;
+	right: 10px;
+}
+
+#list-icon-hp {
+	position: relative;
+	right: 10px;
+}
+
+/*profile.html*/
+
+.profile-card {
+	position: relative;
+	height: 475px;
+	width: 500px;
+}
+
+.edit-button-profile {
+	position: relative;
+	position: relative;
+		color: #FFFFFF;
+	background-color: #0596CC;
+	letter-spacing: 1px;
+	border-color: #0596CC;
+	border-radius: 500px;
+	position: relative;
+	font-size: 16px;
+	top: 25px;
+	right: 30px;
+}
+
+.edit-pencil {
+	position: relative;
+	right: 5px;
+}
+
+/*Medication-list.html*/
+
+.medication-list-box {
+	background: #0596CC;
+	position: relative;
+	height: 525px;
+	width: 900px;
+	top: 60px;
+	left: 290px;
+}
+
+.medication-list-title {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.med-card1 {
+	background: #46494C;
+	width: 850px;
+	height: 75px;
+}
+
+.med-card2 {
+	background: #46494C;
+	width: 850px;
+	height: 75px;
+	position: relative;
+	top: 10px;
+}
+
+.med-card3 {
+	background: #46494C;
+	width: 850px;
+	height: 75px;
+	position: relative;
+	top: 20px;
+}
+
+.med-card4 {
+	background: #46494C;
+	width: 850px;
+	height: 75px;
+	position: relative;
+	top: 30px;
+}
+
+.med-card5 {
+	background: #46494C;
+	width: 850px;
+	height: 75px;
+	position: relative;
+	top: 40px;
+}
+
+.med-info-card {
+	color: #FFFFFF;
+	position: relative;
+	bottom: 10px;
+}
+
+.edit-modal {
+	top: 0px;
+	height: 1200px;
+	width: 800px;
+}
+
+.start-date-cal {
+	position: relative;
+	left: 5px;
+}
+
+.daysofweek {
+	position: relative;
+	left: 140px;
+}
+
+.notify-me-when {
+	width: 200px;
+}
+
+.dosage-type {
+	position: relative;
+	width: 150px;
+	right: 145px;
+}
+
+.dosage-amount {
+	position: relative;
+	width: 150px;
+	left: 150px;
+	bottom: 85px;
+}
+
+.fix-this-space {
+	position: relative;
+	bottom: 80px;
+}
+
+.notify-me-when {
+	position: relative;
+	bottom: 85px;
+}
+
+.save-button {
+	position: relative;
+	color: #FFFFFF;
+	background: #7AA936; 
+	letter-spacing: 1px;
+	border-color: #7AA936;
+	border-radius: 500px;
+	position: relative;
+	top: -80px;
+	left: -140px;
+	width: 125px;
+	font-size: 16px
+}
+
+.cancel-button {
+	position: relative;
+	color: #FFFFFF;
+	background: #46494C; 
+	letter-spacing: 1px;
+	border-color: #46494C;
+	border-radius: 500px;
+	position: relative;
+	top: -80px;
+	left: 143px;
+	width: 100px;
+	font-size: 16px	
+}
+
+.plus-icon {
+	color: #FFFFFF;
+	position: relative;
+	right: 280px;
+}
+
+/*vanilla calendar*/
+html {
+  box-sizing: border-box;
+  font-size: 10px;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  color: #333;
+  font-size: 1.6rem;
+  background-color: #FAFAFA;
+  -webkit-font-smoothing: antialiased;
+}
+
+.logo {
+  margin: 1.6rem auto;
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+  margin: 1.6rem 0;
+}
+
+.container {
+  width: 96%;
+  margin: 1.6rem auto;
+  max-width: 76rem;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+.cal__header button {
+  background: none;
+  border: 0;
+  outline: none;
+  color: inherit;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  cursor: pointer;
+}
+
+.cal button:active {
+  border-radius: 3px;
+  box-shadow: 0 0 0 2px rgba(10, 146, 151, 0.1)
+}
+
+.cal {
+  width: 100%;
+  max-width: 42rem;
+  margin: 0 auto;
+  background-color: #fff;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
+  border: solid 1px #e7e9ed;
+}
+
+.cal__header {
+  display: flex;
+  padding: 1.2rem 1.4rem;
+  align-items: center;
+}
+
+.cal__header svg {
+  fill: #0596CC;
+}
+
+.cal__header__label {
+  width: 100%;
+  text-align: center;
+  font-weight: bold;
+}
+
+.cal__week {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #E7E9ED;
+}
+
+.cal__week span {
+  font-size: 1.2rem;
+  max-width: 14.28%;
+  padding: 1.2rem 1.4rem;
+  flex: 0 0 14.28%;
+  flex-direction: column;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-align: center;
+}
+
+.cal__body {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #fafafa;
+}
+
+.cal__date {
+  background-color: #fff;
+  display: flex;
+  max-width: 14.28%;
+  flex: 0 0 14.28%;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.2rem 0;
+  border-radius: 4px;
+}
+
+.cal__date--active:hover {
+  cursor: pointer;
+}
+
+.cal__date--today {
+  background-color: #0596CC;
+  color: #fff;
+}
+
+.cal__date--selected {
+  background-color: #E7E9ED;
+  color: #333;
+}
+
+.cal__date--disabled {
+  opacity: 0.5;
+}
+
+.cal__date--disabled:hover {
+  cursor: not-allowed;
+}
+
+.demo-picked {
+  text-align: center;
+}
+
+.demo-picked span {
+  font-weight: bold;
+}
+
+/*medication-schedule.html*/
+
+.cal-box {
+	position: relative;
+	width: 150px;
+	height: 300px;
+}
+
+.cal-boxes {
+	position: relative;
+	bottom: 110px;
+	right: 20px;
+}
+
+.odd-day {
+	background-color: #0596CC;
+}
+
+.even-day {
+	background-color: #7AA936;
+}
+
+.d1 {
+	position: relative;
+	top: 150px;
+	left: 60px;
+}
+
+.d2 {
+	position: relative;
+	top: 150px;
+	left: 110px;
+}
+
+.d3 {
+	position: relative;
+	top: 150px;
+	left: 160px;
+}
+
+.d4 {
+	position: relative;
+	top: 150px;
+	left: 210px;
+}
+
+.d5 {
+	position: relative;
+	top: 150px;
+	left: 260px;
+}
+
+.d6 {
+	position: relative;
+	top: 150px;
+	left: 310px;
+}
+
+.d7 {
+	position: relative;
+	top: 150px;
+	left: 360px;
+}
+
+.medication-schedule-title {
+	color: #FFFFFF;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+.medication-schedule {
+	background-color: #46494C;
+	position: relative;
+	top: 100px;
+	left: 20px;
+	width: 1400px;
+	height: 450px
+}
+
+.message-list {
+	position: relative;
+	width: 220px;
+	height: 600px;
+	left: 80px;
+	top: 30px;
+}
+
+.thor-pic {
+	position: relative;
+	right: 0px;
+	bottom: 0px;
+	height: 100px;
+}
+
+.thor-name {
+	position: relative;
+	top: -25px;
+	left: 55px;
+}
+
+.message-boxx {
+	position: fixed;
+	top: 455px;
+	height: 600px
+}
+
+.message1 {
+	position: relative;
+	top: 350px;
+	right: 50px;
+}
+
+.message2 {
+	position: relative;
+	top: 250px;
+}
+
+.message3 {
+	position: relative;
+	top: 430px;
+	right: 50px;
+}
+
+.foot-message {
+	position: relative;
+	top: 310px;
+}
+
+.friends-button {
+	position: relative;
+	color: #FFFFFF;
+	background: #7AA936; 
+	letter-spacing: 1px;
+	border-color: #7AA936;
+	border-radius: 500px;
+	position: relative;
+	font-size: 16px;
+	top: 550px;
+}
+
+.friends-button:hover {
+	color: #7AA936;
+	background: #FFFFFF;
+	border-color: #7AA936;
+}
+
+.find-friends-button {
+	position: relative;
+	color: #FFFFFF;
+	background: #0596CC; 
+	letter-spacing: 1px;
+	border-color: #0596CC;
+	border-radius: 500px;
+	position: relative;
+	font-size: 16px;
+	top: 705px;
+}
+
+.find-friends-button:hover {
+	color: #0596CC;
+	background: #FFFFFF;
+	border-color: #0596CC;
+}
+
+.add-modal {
+	height: 200px;
+}
+
+.add-button-friend {
+	position: relative;
+		color: #FFFFFF;
+	background-color: #0596CC;
+	letter-spacing: 1px;
+	border-color: #0596CC;
+	border-radius: 500px;
+	position: relative;
+	font-size: 16px;
+	top: -50px;
+}
+
+.delete-button {
+	position: relative;
+		color: #FFF;
+	background-color: #F00;
+	letter-spacing: 1px;
+	border-color: #F00;
+	border-radius: 500px;
+	position: relative;
+	font-size: 16px;
+	top: 40px;
+}
+
+.delete-button:hover {
+	color: #F00;
+	background: #FFFFFF;
+	border-color: #F00;
+}
+
+.delete-list-button {
+	position: relative;
+		color: #FFF;
+	background-color: #F00;
+	letter-spacing: 1px;
+	border-color: #F00;
+	font-size: 16px;
+	top: -80px;
+	border-radius: 500px;
+}
+
+.delete-list-button: hover {
+	color: #F00;
+	background: #FFFFFF;
+	border-color: #F00;
+}
+
+.pagenotfound {
+	position: relative;
+	left: 350px;
+	top: 100px;
+}

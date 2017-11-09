@@ -1,0 +1,127 @@
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/js/uikit-icons.min.js"></script>
+
+<!-- Other -->
+<link rel="stylesheet" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+
+<body>
+
+	<!-- login and signup page -->
+	<div align="center" class="login-signup-logo">
+		<img src="pillpromptlogo.png" alt="PillPrompt" width="256" height="256">
+	</div>
+
+	<div class="uk-card uk-card-default uk-card-body login-signup-card">
+		
+		<button class="uk-button uk-button-default uk-position-center login-button login-signup" type="button" uk-toggle="target: #modal-login">Login</button>
+		
+		<br><br>
+		
+		<button class="uk-button uk-button-default uk-position-center signup-button login-signup" type="button" uk-toggle="target: #modal-signup">Signup</button>
+	</div>
+
+	<!-- login modal -->
+	<div id="modal-login" uk-modal>
+	    <div class="uk-modal-dialog uk-modal-body">
+	        <h2 class="uk-modal-title login" align="center">Login</h2>
+
+	        	<!-- close button -->
+				<button class="uk-position-top-right" uk-toggle="target: html.index" type="button" uk-close id="close-login"></button>
+				
+			    <form align="center">
+			        <div class="uk-margin">
+			            <div class="uk-inline uk-form-password">
+			            	<!-- email -->
+			                <span class="uk-form-icon" uk-icon="icon: user"></span>
+			                <input class="uk-input" type="text" placeholder="Email">
+			            </div>
+			        </div>
+
+			        <div class="uk-margin">
+			            <div class="uk-inline">
+			            	<!-- password -->
+			                <span class="uk-form-icon uk-form-icon-flip" uk-icon="icon: lock"></span>
+			                <input class="uk-input" type="password" placeholder="Password">
+			            </div>
+			        </div>
+			    </form>    
+
+				<div align="center">
+					<label><input class="uk-checkbox" type="checkbox"> Remember Me</label>
+				</div>
+	
+				<!-- login button -->
+				<div align="center">
+						<a class="uk-button uk-button-default uk-position-center login-button login" href="homepage.html">Login</a>			
+				</div>
+
+				<div class="forgotpass" align="center">
+					<a class="uk-link-muted" href="#">Forgot Password?</a>
+				</div>
+	    </div>
+	</div>
+
+	<!-- signup modal -->
+	<div id="modal-signup" uk-modal>
+	    <div class="uk-modal-dialog uk-modal-body signup">
+	        <h2 class="uk-modal-title signup" align="center">Sign Up</h2>
+
+	        	<!-- close button -->
+				<button class="uk-position-top-right" uk-toggle="target: html.index" type="button" uk-close id="close-login"></button>
+				
+				 <form align="center">
+			        <div class="uk-margin uk-position-large uk-position-bottom-left email-signup">
+			            <div class="uk-inline">
+			            	<!-- email -->
+			                <input class="uk-input" type="text" placeholder="Email">
+			            </div>
+			        </div>
+
+			        <div class="uk-margin uk-position-large uk-position-bottom-right password-signup">
+			            <div class="uk-inline uk-form-password">
+			            	<!-- password -->
+			                <input class="uk-input" type="password" placeholder="Password">
+			            </div>
+			        </div>
+
+			        <div class="uk-margin uk-position-large uk-position-center-left firstname-signup">
+			            <div class="uk-inline">
+			            	<!-- first name -->
+			                <input class="uk-input" type="text" placeholder="First Name">
+			            </div>
+			        </div>
+
+			        <div class="uk-margin uk-position-large uk-position-center-right lastname-signup">
+			            <div class="uk-inline">
+			            	<!-- last name -->
+			                <input class="uk-input" type="text" placeholder="Last Name">
+			            </div>
+			        </div>
+			    </form>    
+
+				
+				<a class="uk-button uk-button-default uk-position-center signup-button signup" href="homepage.html">Login</a>	
+
+
+				<div class="signup-agreement" align="center">
+					<p>By signing up, you agree to our Terms of Service and Privacy Policy.</p>
+				</div>
+	    </div>
+	</div>
+	
+	<!-- footer -->
+	<div class="uk-container uk-container-expand uk-text-center uk-position-relative footer">
+		<ul uk-margin class="uk-subnav tm-subnav uk-flex-inline uk-flex-center uk-margin-remove-bottom">
+			<li class="uk-first-column foot">VERSION 0.0.1</li>
+			<li><a class="foot" href="#">Community Living Cambridge</a></li>
+			<li><a class="foot" href="#">Terms Of Use</a></li>
+			<li><a class="foot" href="#">Privacy Policy</a></li>
+		</ul>
+	</div>
+</body>

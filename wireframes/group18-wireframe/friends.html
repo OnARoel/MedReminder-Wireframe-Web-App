@@ -1,0 +1,158 @@
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/js/uikit-icons.min.js"></script>
+
+<!-- Other -->
+<link rel="stylesheet" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+<!-- navigation bar -->
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-center navigation-bar  whole-tool-bar">
+
+        <div align="center" class="homepage-logo"> 
+            <img src="pill-prompt-transparent.png" alt="PillPrompt" width="128" height="128">
+        </div>
+
+        <div class="toolbar">
+        <ul class="uk-navbar-nav">
+
+               <li>
+                <a href="homepage.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
+                    <font size="3"; color="#FFF">Home</font>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                    <font size="3"; color="#FFF">Profile</font>
+                </a>
+            </li>
+            <li>
+                <a href="messaging.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+                    <font size="3"; color="#FFF">Messages</font>
+                </a>
+            </li>
+         
+    
+            <li>
+                <a href="medication-schedule.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                    <font size="3"; color="#FFF">Medication Schedule</font>
+                </a>
+            </li>
+            <li>
+                <a href="medication-list.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
+                    <font size="3"; color="#FFF">Medication List</font>
+                </a>
+            </li>
+              <li>
+                <a href="setting.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
+                    <font size="3"; color="#FFF">Settings</font>
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+                    <font size="3"; color="#FFF">Logout</font>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+</nav>
+
+<div class="uk-card uk-card-default uk-width-1-2@m message-list">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <p class="uk-card-title uk-margin-remove-bottom">FRIENDS</p>
+        </div>
+    </div>
+
+        <div class="uk-card uk-card-hover uk-card-body uk-card-body thor-pic">
+            <img width="35" height="35" src="thor.png">
+            <div class="thor-name">
+            <p>Thor</p>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-hover uk-card-body uk-card-body thor-pic">
+            <img width="35" height="35" src="ironman.png">
+            <div class="thor-name">
+            <p>Iron Man</p>
+            </div>
+        </div>
+
+        <div class="uk-card uk-card-hover uk-card-body uk-card-body thor-pic">
+            <img width="35" height="35" src="deadpool.png">
+            <div class="thor-name">
+            <p>Deadpool</p>
+            </div>
+        </div>
+
+        <a class="uk-button uk-button-default uk-position-center friends-button" href="messaging.html">Messages</a>   
+</div>
+
+<<!-- Profile card -->
+<div class="uk-card uk-card-default uk-width-1-2@m profile-card uk-position-center">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="75" height="75" src="thor.png">
+            </div>
+            <div class="uk-width-expand">
+
+                <h3 class="uk-card-title uk-margin-remove-bottom">Thor</h3>
+                
+                <!-- This is a button toggling the modal -->
+                <button class="uk-button uk-button-default uk-margin-small-right uk-position-top-right edit-button-profile delete-button" type="button" uk-toggle="target:#"><span class="uk-icon uk-margin-small-right edit-pencil" uk-icon="icon: pencil; ratio: 0.9"></span>Delete</button>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="uk-card-body">
+        <dl class="uk-description-list uk-description-list-divider">
+            <dt>EMAIL</dt>
+            <dd>god-of-lightning@gmail.com</dd>
+            <dt>Date of Birth</dt>
+            <dd>January 31, 1200</dd>
+            <dt>Gender</dt>
+            <dd>Male</dd>
+            <dt>Phone Number</dt>
+            <dd>XXX-XXX-XXXX</dd>
+        </dl>
+    </div>
+</div>
+
+<a class="uk-button uk-button-default uk-position-center find-friends-button" uk-toggle="target: #modal-example">Find Friends</a> 
+
+<!-- This is the modal -->
+<div id="modal-example" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body add-modal">
+        <h2 class="uk-modal-title">Find Friends</h2>
+
+<!-- close button -->
+                <button class="uk-position-top-right" uk-toggle="target: html.index" type="button" uk-close id="close-login"></button>
+
+                <div class="uk-margin" align="center">
+            <form class="uk-search uk-search-default">
+                <span uk-search-icon></span>
+                <input class="uk-search-input" type="search" placeholder="Search...">
+            </form>
+        </div>
+        <p>Stephen Strange</p>
+        <p class="uk-text-right">
+            <button class="uk-button uk-button-primary add-button-friend" uk-toggle="target: #"type="button">Add</button>
+        </p>
+    </div>
+</div>
