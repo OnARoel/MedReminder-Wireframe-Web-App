@@ -1,0 +1,119 @@
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>PillPrompt Login</title>
+<!--Custom Theme files-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<!-- <link href="css/style.css" rel="stylesheet" type="text/css" media="all" /> -->
+
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="css/login.css">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+<script src="js/login.js"></script>
+</head>
+<body class="login">
+	<div class="container login-wrapper">
+		<div class="col-lg login-page">
+				<div class="login-form">
+					<div class="login-header">
+						<img class="logo" src="images/logo.png">
+						<h1>Sign In</h1>
+					</div>
+					<div class="login-body">
+						<form action="/" method="post">
+							<div class="username">
+								<div class="sign-in-icon">
+									<i class="fa fa-user" aria-hidden="true"></i>
+								</div>
+								<input type="text" class="login-field"  name="logemail" placeholder="E-mail" required="">
+							</div>
+							<div class="password">
+								<div class="password-icon">
+									<i class="fa fa-lock" aria-hidden="true"></i>
+								</div>
+								<input type="password" class="login-field" id="password-field" name="logpassword" placeholder="Password" required="">
+							</div>
+							<div class="useless-items">
+									<div class="remember-wrapper">
+										<div class="remember"><input type="checkbox" name="Remember" value="Remember">Remember Me</div>
+										<div class="forgot"><a href="#">forgot your password?</a></div>
+									</div>
+									<div class="remember-wrapper">
+										<div class="show-pass"><input type="checkbox" name="show-pass" id="show-pass" value="show-pass">Show Password</div>
+										<div class="sign-up"><a data-toggle="modal" data-target="#signupModal">Sign up for an account</a></div>
+									</div>
+							</div>
+							<div class="button-wrapper">
+								<input class="btn" type="submit" value="Login">
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="signupModal" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+
+					<!-- Modal content-->
+					<div class="modal-content">
+							<div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal">&times;</button>
+									<h4 class="modal-title">Register</h4>
+							</div>
+							<div class="modal-body">
+								<div class="signin-form profile">
+									<div class="signup-form">
+										<form action="/" method="post">
+											<input type="text" name="email" placeholder="E-mail" required="">
+											<input type="text" name="username" placeholder="Username" required="">
+											<input type="password" name="password" placeholder="Password" required="">
+											<input type="password" name="passwordConf" placeholder="Confirm Password" required="">
+											<input type="submit" value="REGISTER">
+										</form>
+									</div>
+									<p> By clicking register, I agree to the <a href="#">terms and conditions</a></p>
+								</div>
+							</div>
+					</div>
+
+			</div>
+	</div>
+		<!-- <div class="agile">
+			<div class="signin-form profile">
+				<h3>Register</h3>
+
+				<div class="login-form">
+					<form action="/" method="post">
+						<input type="text" name="email" placeholder="E-mail" required="">
+						<input type="text" name="username" placeholder="Username" required="">
+						<input type="password" name="password" placeholder="Password" required="">
+						<input type="password" name="passwordConf" placeholder="Confirm Password" required="">
+						<input type="submit" value="REGISTER">
+					</form>
+				</div>
+				<p><a href="#"> By clicking register, I agree to your terms</a></p>
+			</div>
+		</div> -->
+</body>
+</html>
