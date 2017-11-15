@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PillPrompt Login</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="login.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <script src="login.js"></script>
+</head>
+
+<body class="login">
+    <div class="container login-wrapper">
+        <div class="col-lg login-page">
+            <div class="login-form">
+                <div class="login-header">
+                    <img class="logo" src="logo.png">
+                    <h1>Sign In</h1>
+                </div>
+                <div class="login-body">
+                    <div class="username">
+                        <div class="sign-in-icon">
+                            <i class="fa fa-user" aria-hidden="true"></i>
+                        </div>
+                        <input type="text" class="login-field" placeholder="Email" name="uname" required>
+                    </div>
+                    <div class="password">
+                        <div class="password-icon">
+                            <i class="fa fa-lock" aria-hidden="true"></i>
+                        </div>
+                        <input type="password" class="login-field" id="password-field" placeholder="Password" name="psw" required>
+                    </div>
+                    <div class="useless-items">
+                        <div class="remember-wrapper">
+                            <div class="remember"><input type="checkbox" name="Remember" value="Remember">Remember Me</div>
+                            <div class="forgot"><a href="#">forgot your password?</a></div>
+                        </div>
+                        <div class="show-pass"><input type="checkbox" name="show-pass" id="show-pass" value="show-pass">Show Password</div>
+                    </div>
+                    <div class="button-wrapper">
+                        <a class="btn" href="dashboard.html">Login</a>
+                    </div>
+                </div>
+            </div>
+            <div class="error-wrapper">
+                <div class="triangle">
+                </div>
+                <div class="login-error">
+                    Invalid Username or Password
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

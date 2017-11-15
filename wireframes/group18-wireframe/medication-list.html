@@ -1,0 +1,261 @@
+<!-- UIkit CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/css/uikit.min.css" />
+
+<!-- UIkit JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/js/uikit.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.33/js/uikit-icons.min.js"></script>
+
+<!-- Other -->
+<link rel="stylesheet" href="main.css">
+<link href='https://fonts.googleapis.com/css?family=Open Sans' rel='stylesheet'>
+
+<!-- navigation bar -->
+<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="uk-navbar-center navigation-bar  whole-tool-bar">
+
+        <div align="center" class="homepage-logo"> 
+            <img src="pill-prompt-transparent.png" alt="PillPrompt" width="128" height="128">
+        </div>
+
+        <div class="toolbar">
+        <ul class="uk-navbar-nav">
+
+               <li>
+                <a href="homepage.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
+                    <font size="3"; color="#FFF">Home</font>
+                </a>
+            </li>
+            <li>
+                <a href="profile.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                    <font size="3"; color="#FFF">Profile</font>
+                </a>
+            </li>
+            <li>
+                <a href="messaging.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+                    <font size="3"; color="#FFF">Messages</font>
+                </a>
+            </li>
+         
+    
+            <li>
+                <a href="medication-schedule.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                    <font size="3"; color="#FFF">Medication Schedule</font>
+                </a>
+            </li>
+            <li>
+                <a href="medication-list.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
+                    <font size="3"; color="#FFF">Medication List</font>
+                </a>
+            </li>
+              <li>
+                <a href="setting.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
+                    <font size="3"; color="#FFF">Settings</font>
+                </a>
+            </li>
+
+            <li>
+                <a href="index.html">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+                    <font size="3"; color="#FFF">Logout</font>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    </div>
+</nav>
+
+
+<div class="uk-card uk-card-default uk-width-1-2@m medication-list-box" align="center">
+   
+	<!-- medication list header -->
+    <div class="uk-card-header">
+            <h3 class="medication-list-title">Medication List</h3>
+    </div>
+   
+   	<!-- medication list body -->
+    <div class="uk-card-body">
+    
+	    <!-- clonidine card -->
+		<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m med-card1" uk-toggle="target: #edit-medication">
+
+			<!-- clonidine info-->
+		    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+			    <div class="med-info-card">Clonidine</div>
+			    <div class="med-info-card">
+			    	S
+			    	<span style="color: #0596CC">M</span>
+					T
+					<span style="color: #0596CC">W</span>
+					T
+					<span style="color: #0596CC">F</span>
+					S
+			    </div>
+			    <div class="med-info-card">7:00AM</div>
+			    <div class="med-info-card">1 Pill</div>
+			</div>
+
+		</div>
+
+		<!-- Librium card -->
+		<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m med-card2" uk-toggle="target: #edit-medication">
+
+			<!-- Librium info-->
+		    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+			    <div class="med-info-card">Librium</div>
+			    <div class="med-info-card">
+			    	S
+			    	M
+			    	<span style="color: #0596CC">T</span>
+					W
+					<span style="color: #0596CC">T</span>
+					F
+					S
+			    </div>
+			    <div class="med-info-card">10:00PM</div>
+			    <div class="med-info-card">450.0mg</div>
+			</div>
+
+		</div>
+
+		<!-- Xanax card -->
+		<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m med-card3" uk-toggle="target: #edit-medication">
+
+			<!-- Xanax info-->
+		    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+			    <div class="med-info-card">Xanax</div>
+			    <div class="med-info-card">
+			    	<span style="color: #0596CC">S</span>
+					M T W T F S
+			    </div>
+			    <div class="med-info-card">10:00PM</div>
+			    <div class="med-info-card">2 Pill</div>
+			</div>
+
+		</div>
+
+		<!-- add card -->
+		<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m med-card4" uk-toggle="target: #edit-medication">
+
+			<!-- add info-->
+		    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+			    <div class="med-info-card"><span class="uk-form-icon plus-icon" uk-icon="icon: plus-circle"></span>Add Medication</div>
+			</div>
+
+		</div>
+
+    </div>
+</div>
+
+<!-- medication edit modal -->
+<div id="edit-medication" uk-modal>
+	<div class="uk-modal-dialog uk-modal-body edit-modal" align="center">
+	    <h2 class="uk-modal-title">Edit Medication</h2>
+				
+		<!-- close button -->
+		<button class="uk-position-top-right" uk-toggle="target: medication-list.index" type="button" uk-close id="close-login"></button>
+				
+		 <form>
+			
+            <!-- medication name -->
+            <div class="uk-margin uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: tag"></span>
+                <input class="uk-input" type="text" placeholder="Medication Name">
+            </div>
+
+			<hr class="uk-divider-icon">
+			<br>
+
+		    <div class="container start-date-cal">
+
+				<div class="cal">
+					<div class="cal__header">
+						<button class="btn btn-action btn-link btn-lg" data-calendar-toggle="previous"><svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
+						<path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z"></path></svg></button>
+						<div class="cal__header__label" data-calendar-label="month">
+							March 2017
+						</div><button class="btn btn-action btn-link btn-lg" data-calendar-toggle="next"> <svg height="24" version="1.1" viewbox="0 0 24 24" width="24">
+						<path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z"></path></svg></button>
+					</div>
+					<div class="cal__week">
+						<span>Mon</span> <span>Tue</span><span>Wed</span> <span>Thu</span> <span>Fri</span> <span>Sat</span> <span>Sun</span>
+					</div>
+					<div class="cal__body" data-calendar-area="month"></div>
+				</div>
+
+				<p class="demo-picked">
+					Start date: <span data-calendar-label="picked"></span>
+				</p>
+
+		    </div>
+
+			<hr class="uk-divider-icon">
+
+			<p>Days of the Week<p>
+			 <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid daysofweek">
+	            <label><input class="uk-checkbox" type="checkbox"> Sun</label>
+	            <label><input class="uk-checkbox" type="checkbox"> Mon</label>
+	            <label><input class="uk-checkbox" type="checkbox"> Tues</label>
+	            <label><input class="uk-checkbox" type="checkbox"> Weds</label>
+	            <label><input class="uk-checkbox" type="checkbox"> Thurs</label>
+	            <label><input class="uk-checkbox" type="checkbox"> Fri</label>
+	            <label><input class="uk-checkbox" type="checkbox"> Sat</label>
+	        </div>
+
+	        <hr class="uk-divider-icon">
+
+			<div class="uk-form-controls dosage-type">
+				<p>Dosage Type</p>
+	            <select class="uk-select" id="form-horizontal-select">
+	                <option value="pill">Pill</option>
+	                <option value="liquid">Liquid</option>
+	                <option value="injection">Injection</option>
+	            </select>
+	        </div>
+
+			<div class="uk-form-controls dosage-amount">
+				<p>Dosage Amount</p>
+	            <select class="uk-select" id="form-horizontal-select">
+	                <option>1</option>
+	                <option>2</option>
+	                <option>3</option>
+	            </select>
+	        </div>
+
+			<hr class="uk-divider-icon fix-this-space">
+
+	        <div class="uk-form-controls notify-me-when">
+	        	<p>Notify Me</p>
+	            <select class="uk-select" id="form-horizontal-select">
+	                <option>5 minutes before</option>
+	                <option>10 minutes before</option>
+	                <option>15 minutes before</option>
+	                <option>30 minutes before</option>
+	            </select>
+	        </div>
+
+			<hr class="uk-divider-icon fix-this-space">
+
+			<div class="uk-position-bottom-center">
+				<a class="uk-button uk-button-default uk-position-center save-button" href="medication-list.html">Save</a>
+				<a class="uk-button uk-button-default uk-position-center cancel-button" href="medication-list.html">Cancel</a>
+				<a class="uk-button uk-button-default uk-position-center delete-list-button" href="medication-list.html">Delete</a>			
+			</div>	
+
+	    </form>    	
+	         
+	</div>
+</div> 
+
+<script src="vanillacalendar.js" type="text/javascript"></script>
+	<script>
+		window.addEventListener('load', function () {
+		  vanillacalendar.init();
+		})
+</script>
