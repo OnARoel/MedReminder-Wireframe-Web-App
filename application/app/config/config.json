@@ -1,0 +1,45 @@
+{
+
+    "development": {
+
+        "username": "grant",
+
+        "password": "testing",
+
+        "database": "development",
+
+        "host": "127.0.0.1",
+
+        "dialect": "mysql"
+
+    },
+
+    "test": {
+
+        "username": "grant",
+
+        "password": "testing",
+
+        "database": "",
+
+        "host": "",
+
+        "dialect": "mysql"
+
+    },
+
+    "production": {
+
+        "username": "grant",
+
+        "password": "testing",
+
+        "database": "",
+
+        "host": "127.0.0.1",
+
+        "dialect": "mysql"
+
+    }
+
+}
