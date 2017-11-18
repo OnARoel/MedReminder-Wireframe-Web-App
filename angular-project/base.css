@@ -2,6 +2,10 @@
     font-family: "Open Sans";
 }
 
+.alert {
+    margin-bottom: 0px;
+}
+
 .login-page {
     background-image: url(assets/blurry-blue-green-backgrounds-powerpoint.jpg);
     background-size: cover;
@@ -136,11 +140,6 @@
 
 .uk-input {
     border-radius: 500px;
-}
-
-.uk-modal-dialog {
-    height: 350px;
-    width: 300px;
 }
 
 .forgotpass {
