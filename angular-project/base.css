@@ -35,18 +35,24 @@
 }
 
 
-/*grab code*/
+
 
 .whole-tool-bar {
     background: #46494C;
     width: 100%;
-    height: 110px;
 }
 
 .toolbar {
-    position: relative;
-    right: -200px;
+    padding-left: 20px;
 }
+
+.uk-navbar-nav li a {
+    height: auto;
+    font-size: 1.25em;
+    color: #fff;
+}
+
+/*grab code*/
 
 .login-signup-logo {
     position: relative;
@@ -221,13 +227,13 @@
     letter-spacing: 1px;
 }
 
-.homepage-logo {
-    position: absolute;
-    left: 50px;
+.navigation-wrapper {
+    margin: auto;
 }
 
 .uk-navbar-container {
     height: 105px;
+    background: #46494C !important;
 }
 
 .homepage-schedule-button {

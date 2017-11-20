@@ -23,6 +23,9 @@
             AuthenticationService.Login(vm.username, vm.password, function (response) {
                 if (response.success) {
                     AuthenticationService.SetCredentials(vm.username, vm.password);
+                    $(function () {
+                        $('.ng-binding.ng-scope.alert.alert-danger').remove();
+                    });
                     $location.path('/');
                 } else {
                     FlashService.Error(response.message);
