@@ -1,11 +1,80 @@
-﻿<h1>Hi {{vm.user.firstName}}!</h1>
-<p>You're logged in!!</p>
+﻿<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="navigation-wrapper">
+        <div class="uk-navbar-center navigation-bar whole-tool-bar">
+
+            <div align="center" class="homepage-logo">
+                <img src="assets/pill-prompt-transparent.png" alt="PillPrompt Logo" width="128" height="128">
+            </div>
+
+            <div class="toolbar">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#!/">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
+                            <span class="nav-text">Home</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+                    <span class="nav-text">Messages</span>
+                </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                    <span class="nav-text">Medication Schedule</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
+                    <span class="nav-text">Medication List</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/login">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+                    <span class="nav-text">Logout</span>
+                </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- daily reminder -->
+<div class="uk-card uk-card-default uk-card-body daily-reminder uk-position-bottom-center" align="center">
+    <h3 class="uk-card-title homepage">Daily Reminders</h3>
+
+    <div class="uk-grid-divider uk-child-width-expand@s" align="center" uk-grid>
+        <div>Librium</div>
+        <div>10:00PM</div>
+    </div>
+    <!--
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in!</p>
 <h3>All registered users:</h3>
 <ul>
     <li ng-repeat="user in vm.allUsers">
-        {{user.username}} ({{user.firstName}} {{user.lastName}})
-        - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+        {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a ng-click="vm.deleteUser(user.id)">Delete</a>
     </li>
 </ul>
-<p>&nbsp;</p>
-<p><a href="#!/login" class="btn btn-primary">Logout</a></p>
+-->
+</div>
