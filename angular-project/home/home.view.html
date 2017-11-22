@@ -63,18 +63,9 @@
 <div class="uk-card uk-card-default uk-card-body daily-reminder uk-position-bottom-center" align="center">
     <h3 class="uk-card-title homepage">Daily Reminders</h3>
 
-    <div class="uk-grid-divider uk-child-width-expand@s" align="center" uk-grid>
-        <div>Librium</div>
-        <div>10:00PM</div>
+    <div class="uk-grid-divider uk-child-width-expand@s" align="center" uk-grid ng-repeat="medication in vm.user.medications" ng-if="medication.ID && medication.DoW.wednesday == 1">
+        <div>{{medication.name}}</div>
+        <div>{{medication.time}}</div>
+        <div>{{medication.amount}} {{medication.type}}(s)</div>
     </div>
-    <!--
-<h1>Hi {{vm.user.firstName}}!</h1>
-<p>You're logged in!</p>
-<h3>All registered users:</h3>
-<ul>
-    <li ng-repeat="user in vm.allUsers">
-        {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a ng-click="vm.deleteUser(user.id)">Delete</a>
-    </li>
-</ul>
--->
 </div>
