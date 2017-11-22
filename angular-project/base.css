@@ -351,6 +351,7 @@
 /*homepage.html*/
 
 .daily-reminder {
+    top: 30%;
     position: relative;
     bottom: 190px;
     height: 300px;
@@ -425,6 +426,7 @@
 /*profile.html*/
 
 .profile-card {
+    top: 60%;
     position: relative;
     width: 500px;
 }
