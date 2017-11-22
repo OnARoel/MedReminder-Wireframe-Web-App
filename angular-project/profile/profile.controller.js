@@ -12,7 +12,6 @@
 
         vm.user = null;
         vm.deleteUser = deleteUser;
-
         initController();
 
         function initController() {
