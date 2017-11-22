@@ -706,7 +706,7 @@ h1 {
 
 .message2 {
     position: relative;
-    top: 250px;
+    top: 280px;
 }
 
 .message3 {
@@ -736,6 +736,24 @@ h1 {
     color: #7AA936;
     background: #FFFFFF;
     border-color: #7AA936;
+}
+
+.send-button {
+    position: relative;
+    color: #FFFFFF;
+    background: #0596CC;
+    letter-spacing: 1px;
+    border-color: #0596CC;
+    border-radius: 500px;
+    position: relative;
+    font-size: 16px;
+    top: 550px;
+}
+
+.send-button:hover {
+    color: #0596CC;
+    background: #FFFFFF;
+    border-color: #0596CC;
 }
 
 .find-friends-button {
