@@ -26,7 +26,12 @@
                 templateUrl: 'profile/profile.view.html',
                 controllerAs: 'vm'
             })
-			.when('/settings', {
+            .when('/medication-list', {
+                controller: 'MedicationListController',
+                templateUrl: 'medication-list/medication-list.view.html',
+                controllerAs: 'vm'
+            })
+            .when('/settings', {
                 controller: 'SettingsController',
                 templateUrl: 'settings/settings.view.html',
                 controllerAs: 'vm'

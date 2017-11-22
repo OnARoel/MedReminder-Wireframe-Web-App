@@ -1,0 +1,308 @@
+﻿<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="navigation-wrapper">
+        <div class="uk-navbar-center navigation-bar whole-tool-bar">
+
+            <div align="center" class="homepage-logo">
+                <img src="assets/pill-prompt-transparent.png" alt="PillPrompt Logo" width="128" height="128">
+            </div>
+
+            <div class="toolbar">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#!/">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
+                            <span class="nav-text">Home</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#!/profile">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+                    <span class="nav-text">Messages</span>
+                </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                    <span class="nav-text">Medication Schedule</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#!/medication-list">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
+                    <span class="nav-text">Medication List</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/login">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+                    <span class="nav-text">Logout</span>
+                </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in</p>
+<ul>
+    <li>
+        {{vm.user.firstName}} ({{vm.user.lastName}}) - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+-->
+<div class="uk-card uk-card-default uk-width-1-2@m medication-list-box" align="center">
+
+    <!-- medication list header -->
+    <div class="uk-card-header">
+        <h3 class="medication-list-title">Medication List</h3>
+    </div>
+
+    <!-- medication list body -->
+    <div class="uk-card-body">
+
+        <div class="med-card" uk-toggle="target: #edit-medication" ng-if="medication.ID" ng-click="vm.populateMed(medication)" ng-repeat="medication in vm.user.medications">
+            <div class="med-info-card">{{medication.name}}</div>
+            <div class="med-info-card">
+                <span class="date-active" ng-if="medication.DoW.sunday">Su</span>
+                <span ng-if="!medication.DoW.sunday">Su</span>
+                <span class="date-active" ng-if="medication.DoW.monday">M</span>
+                <span ng-if="!medication.DoW.monday">M</span>
+                <span class="date-active" ng-if="medication.DoW.tuesday">Tu</span>
+                <span ng-if="!medication.DoW.tuesday">Tu</span>
+                <span class="date-active" ng-if="medication.DoW.wednesday">W</span>
+                <span ng-if="!medication.DoW.wednesday">W</span>
+                <span class="date-active" ng-if="medication.DoW.thursday">Th</span>
+                <span ng-if="!medication.DoW.thursday">Th</span>
+                <span class="date-active" ng-if="medication.DoW.friday">F</span>
+                <span ng-if="!medication.DoW.friday">F</span>
+                <span class="date-active" ng-if="medication.DoW.saturday">Sa</span>
+                <span ng-if="!medication.DoW.saturday">Sa</span>
+            </div>
+            <div class="med-info-card">{{medication.time}}</div>
+            <div class="med-info-card">{{medication.amount}} {{medication.type}}</div>
+        </div>
+
+        <!-- add card -->
+        <div class="add-med-card" uk-toggle="target: #add-medication">
+
+            <!-- add info-->
+            <div class="med-card">
+                <div class="add-card">
+                    <span class="uk-form-icon plus-icon" uk-icon="icon: plus-circle"></span>Add Medication
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- medication add modal -->
+<div id="add-medication" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body edit-modal" align="center">
+        <h2 class="uk-modal-title">Add Medication</h2>
+
+        <!-- close button -->
+        <button class="uk-position-top-right" uk-toggle="target: medication-list.index" type="button" uk-close id="close-login"></button>
+
+        <form>
+
+            <!-- medication name -->
+            <div class="uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: tag"></span>
+                <input class="uk-input" id="add-med-name" type="text" placeholder="Medication Name">
+            </div>
+            <p>Time</p>
+            <p>
+                <input class="timepicker text-center" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" id="add-med-time">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.timepicker').timepicker({
+                            timeFormat: 'h:mm p',
+                            interval: 60,
+                            minTime: '10',
+                            maxTime: '6:00pm',
+                            defaultTime: '11',
+                            startTime: '10:00',
+                            dynamic: false,
+                            dropdown: true,
+                            scrollbar: true
+                        });
+                    });
+
+                </script>
+            </p>
+
+            <hr class="uk-divider-icon">
+
+            <p>Days of the Week
+                <p>
+                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid daysofweek">
+                        <label><input class="uk-checkbox" id="add-med-sunday" type="checkbox"> Sun</label>
+                        <label><input class="uk-checkbox" id="add-med-monday" type="checkbox"> Mon</label>
+                        <label><input class="uk-checkbox" id="add-med-tuesday" type="checkbox"> Tues</label>
+                        <label><input class="uk-checkbox" id="add-med-wednesday" type="checkbox"> Weds</label>
+                        <label><input class="uk-checkbox" id="add-med-thursday" type="checkbox"> Thurs</label>
+                        <label><input class="uk-checkbox" id="add-med-friday" type="checkbox"> Fri</label>
+                        <label><input class="uk-checkbox" id="add-med-saturday" type="checkbox"> Sat</label>
+                    </div>
+
+                    <hr class="uk-divider-icon">
+                    <div class="dosage-wrapper clearfix">
+                        <div class="uk-form-controls dosage-type">
+                            <p>Dosage Type</p>
+                            <select class="uk-select dosage-select" id="add-med-dosage-type">
+	                <option value="pill">Pill</option>
+	                <option value="liquid">Liquid</option>
+	                <option value="injection">Injection</option>
+	            </select>
+                        </div>
+
+                        <div class="uk-form-controls dosage-amount">
+                            <p>Dosage Amount</p>
+                            <select class="uk-select dosage-select" id="add-med-dosage-amount">
+	                <option>1</option>
+	                <option>2</option>
+	                <option>3</option>
+                    <option>4</option>
+	                <option>5</option>
+	            </select>
+                        </div>
+                    </div>
+
+                    <hr class="uk-divider-icon fix-this-space">
+
+                    <div class="uk-form-controls notify-me-when">
+                        <p>Notify Me</p>
+                        <select class="uk-select" id="form-horizontal-select">
+	                       <option>5 minutes before</option>
+	                       <option>10 minutes before</option>
+	                       <option>15 minutes before</option>
+	                       <option>30 minutes before</option>
+	                   </select>
+                    </div>
+                    <hr class="uk-divider-icon fix-this-space">
+                    <div class="button-holder">
+                        <button class="uk-button uk-button-default medication-button save-button" ng-click="vm.addMed()" uk-toggle="target: medication-list.index" type="button">Save</button>
+                        <button class="uk-button uk-button-default medication-button cancel-button" uk-toggle="target: medication-list.index" type="button">Cancel</button>
+                        <button class="uk-button uk-button-default medication-button delete-list-button" uk-toggle="target: medication-list.index" type="button">Delete</button>
+                    </div>
+        </form>
+
+    </div>
+</div>
+
+<!-- medication Edit modal -->
+<div id="edit-medication" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body edit-modal" align="center">
+        <h2 class="uk-modal-title">Edit Medication</h2>
+
+        <!-- close button -->
+        <button class="uk-position-top-right" uk-toggle="target: medication-list.index" type="button" uk-close id="close-login"></button>
+
+        <form>
+
+            <!-- medication name -->
+            <div class="uk-inline">
+                <span class="hidden" id="edit-med-id"></span>
+                <span class="uk-form-icon" uk-icon="icon: tag"></span>
+                <input class="uk-input" id="edit-med-name" type="text" placeholder="Medication Name">
+            </div>
+            <p>Time</p>
+            <p>
+                <input class="timepicker text-center" jt-timepicker="" time="model.time" time-string="model.timeString" default-time="model.options.defaultTime" time-format="model.options.timeFormat" start-time="model.options.startTime" min-time="model.options.minTime" max-time="model.options.maxTime" interval="model.options.interval" dynamic="model.options.dynamic" scrollbar="model.options.scrollbar" dropdown="model.options.dropdown" id="edit-med-time">
+                <script type="text/javascript">
+                    $(document).ready(function() {
+                        $('.timepicker').timepicker({
+                            timeFormat: 'h:mm p',
+                            interval: 60,
+                            minTime: '10',
+                            maxTime: '6:00pm',
+                            defaultTime: '11',
+                            startTime: '10:00',
+                            dynamic: false,
+                            dropdown: true,
+                            scrollbar: true
+                        });
+                    });
+
+                </script>
+            </p>
+
+            <hr class="uk-divider-icon">
+
+            <p>Days of the Week
+                <p>
+                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid daysofweek">
+                        <label><input class="uk-checkbox" id="edit-med-sunday" type="checkbox"> Sun</label>
+                        <label><input class="uk-checkbox" id="edit-med-monday" type="checkbox"> Mon</label>
+                        <label><input class="uk-checkbox" id="edit-med-tuesday" type="checkbox"> Tues</label>
+                        <label><input class="uk-checkbox" id="edit-med-wednesday" type="checkbox"> Weds</label>
+                        <label><input class="uk-checkbox" id="edit-med-thursday" type="checkbox"> Thurs</label>
+                        <label><input class="uk-checkbox" id="edit-med-friday" type="checkbox"> Fri</label>
+                        <label><input class="uk-checkbox" id="edit-med-saturday" type="checkbox"> Sat</label>
+                    </div>
+
+                    <hr class="uk-divider-icon">
+                    <div class="dosage-wrapper clearfix">
+                        <div class="uk-form-controls dosage-type">
+                            <p>Dosage Type</p>
+                            <select class="uk-select dosage-select" id="edit-med-dosage-type">
+	                <option value="pill">Pill</option>
+	                <option value="liquid">Liquid</option>
+	                <option value="injection">Injection</option>
+	            </select>
+                        </div>
+
+                        <div class="uk-form-controls dosage-amount">
+                            <p>Dosage Amount</p>
+                            <select class="uk-select dosage-select" id="edit-med-dosage-amount">
+	                <option>1</option>
+	                <option>2</option>
+	                <option>3</option>
+                    <option>4</option>
+	                <option>5</option>
+	            </select>
+                        </div>
+                    </div>
+
+                    <hr class="uk-divider-icon fix-this-space">
+
+                    <div class="uk-form-controls notify-me-when">
+                        <p>Notify Me</p>
+                        <select class="uk-select" id="form-horizontal-select">
+	                       <option>5 minutes before</option>
+	                       <option>10 minutes before</option>
+	                       <option>15 minutes before</option>
+	                       <option>30 minutes before</option>
+	                   </select>
+                    </div>
+                    <hr class="uk-divider-icon fix-this-space">
+                    <div class="button-holder">
+                        <button class="uk-button uk-button-default medication-button save-button" ng-click="vm.updateMed()" uk-toggle="target: medication-list.index" type="button">Update</button>
+                        <button class="uk-button uk-button-default medication-button cancel-button" uk-toggle="target: medication-list.index" type="button">Cancel</button>
+                        <button class="uk-button uk-button-default medication-button delete-list-button" ng-click="vm.deleteMed()" uk-toggle="target: medication-list.index" type="button">Delete</button>
+                    </div>
+        </form>
+
+    </div>
+</div>
