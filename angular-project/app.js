@@ -37,6 +37,11 @@
                 templateUrl: 'medication-list/medication-list.view.html',
                 controllerAs: 'vm'
             })
+            .when('/medication-schedule', {
+                controller: 'MedicationSchedController',
+                templateUrl: 'medication-sched/medication-sched.view.html',
+                controllerAs: 'vm'
+            })
             .when('/settings', {
                 controller: 'SettingsController',
                 templateUrl: 'settings/settings.view.html',

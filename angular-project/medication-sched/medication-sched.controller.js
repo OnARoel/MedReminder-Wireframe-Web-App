@@ -3,11 +3,11 @@
 
     angular
         .module('app')
-        .controller('MedicationListController', MedicationListController);
+        .controller('MedicationSchedController', MedicationSchedController);
 
-    MedicationListController.$inject = ['UserService', '$rootScope'];
+    MedicationSchedController.$inject = ['UserService', '$rootScope'];
 
-    function MedicationListController(UserService, $rootScope) {
+    function MedicationSchedController(UserService, $rootScope) {
         var vm = this;
 
         vm.user = null;

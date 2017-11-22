@@ -38,8 +38,15 @@
     transform: translate(-50%, 0%);
 }
 
+.edit-schedule {
+    top: 0px !important;
+    right: 0px !important;
+    margin-bottom: 1em;
+}
 
-
+.medication-settings {
+    text-align: right;
+}
 
 .whole-tool-bar {
     background: #46494C;
@@ -121,6 +128,107 @@
     color: white;
     border-radius: 10px;
     display: inline-block;
+}
+
+.calendar .day {
+    border: 3px solid #CFCDD0;
+    width: 14.06%;
+    height: 125px;
+    display: inline-block;
+    margin: -2px;
+    overflow: hidden;
+    position: relative;
+}
+
+.calendar .tuesday,
+.calendar .wednesday,
+.calendar .thursday,
+.calendar .friday,
+.calendar .saturday {
+    border-right: 0px;
+}
+
+.calendar .tuesday {
+    border-left: 0px;
+}
+
+.weekly-cal {
+    margin-top: 3em;
+}
+
+.weekly-cal h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+
+.calendar ul {
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 1em;
+}
+
+.calendar .completed {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+
+.calendar .circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #7AA936;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.calendar i.fa.fa-exclamation-triangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    color: #ffa900;
+}
+
+.calendar .circle .fa-check {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 32px;
+    color: white;
+
+}
+
+.dates {
+    display: flex;
+}
+
+.dates .date {
+    width: 14.28%;
+    margin-top: -0.15em;
+    font-size: 1.25em;
+    text-align: center;
+}
+
+.description {
+    margin: 1em 0em;
+    font-size: 1em;
+}
+
+.save-settings {
+    float: right;
 }
 
 
@@ -363,6 +471,17 @@
     font-size: 16px;
     top: 35px;
     right: 30px;
+}
+
+.add-medication-sched {
+    position: relative;
+    color: #FFFFFF;
+    background-color: #7aa937;
+    letter-spacing: 1px;
+    border-color: #7aa937;
+    border-radius: 500px;
+    position: relative;
+    font-size: 16px;
 }
 
 .edit-pencil {
