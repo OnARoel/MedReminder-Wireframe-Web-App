@@ -1,0 +1,217 @@
+﻿<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="navigation-wrapper">
+        <div class="uk-navbar-center navigation-bar whole-tool-bar">
+
+            <div align="center" class="homepage-logo">
+                <img src="assets/pill-prompt-transparent.png" alt="PillPrompt Logo" width="128" height="128">
+            </div>
+
+            <div class="toolbar">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#!/">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
+                            <span class="nav-text">Home</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#!/profile">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+                    <span class="nav-text">Messages</span>
+                </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                    <span class="nav-text">Medication Schedule</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#!/medication-list">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
+                    <span class="nav-text">Medication List</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/login">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+                    <span class="nav-text">Logout</span>
+                </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+
+<!--
+<h1>Hi {{vm.user.firstName}}!</h1>
+<p>You're logged in</p>
+<ul>
+    <li>
+        {{vm.user.firstName}} ({{vm.user.lastName}}) - <a ng-click="vm.deleteUser(user.id)">Delete</a>
+    </li>
+</ul>
+-->
+<div class="uk-card uk-card-default uk-width-1-2@m medication-list-box" align="center">
+
+    <!-- medication list header -->
+    <div class="uk-card-header">
+        <h3 class="medication-list-title">Medication List</h3>
+    </div>
+
+    <!-- medication list body -->
+    <div class="uk-card-body">
+
+        <!-- clonidine card -->
+        <div class="med-card" uk-toggle="target: #edit-medication">
+            <div class="med-info-card">Clonidine</div>
+            <div class="med-info-card">
+                S
+                <span style="color: #0596CC">M</span> T
+                <span style="color: #0596CC">W</span> T
+                <span style="color: #0596CC">F</span> S
+            </div>
+            <div class="med-info-card">7:00AM</div>
+            <div class="med-info-card">1 Pill</div>
+        </div>
+        <!--
+ LIBRIUM CARD
+<div class="uk-card uk-card-default uk-card-body uk-width-1-2@m med-card2" uk-toggle="target: #edit-medication">
+
+
+    <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+        <div class="med-info-card">Librium</div>
+        <div class="med-info-card">
+            S M
+            <span style="color: #0596CC">T</span> W
+            <span style="color: #0596CC">T</span> F S
+        </div>
+        <div class="med-info-card">10:00PM</div>
+        <div class="med-info-card">450.0mg</div>
+    </div>
+
+</div>
+-->
+
+        <!--
+        XANAX CARD
+        <div class="uk-card uk-card-default uk-card-body uk-width-1-2@m med-card3" uk-toggle="target: #edit-medication">
+
+
+            <div class="uk-grid-divider uk-child-width-expand@s" uk-grid>
+                <div class="med-info-card">Xanax</div>
+                <div class="med-info-card">
+                    <span style="color: #0596CC">S</span> M T W T F S
+                </div>
+                <div class="med-info-card">10:00PM</div>
+                <div class="med-info-card">2 Pill</div>
+            </div>
+
+        </div>
+-->
+
+        <!-- add card -->
+        <div class="add-med-card" ng-click="vm.addMed()" uk-toggle="target: #edit-medication">
+
+            <!-- add info-->
+            <div class="med-card">
+                <div class="add-card">
+                    <span class="uk-form-icon plus-icon" uk-icon="icon: plus-circle"></span>Add Medication
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+
+<!-- medication edit modal -->
+<div id="edit-medication" uk-modal>
+    <div class="uk-modal-dialog uk-modal-body edit-modal" align="center">
+        <h2 class="uk-modal-title">Edit Medication</h2>
+
+        <!-- close button -->
+        <button class="uk-position-top-right" uk-toggle="target: medication-list.index" type="button" uk-close id="close-login"></button>
+
+        <form>
+
+            <!-- medication name -->
+            <div class="uk-margin uk-inline">
+                <span class="uk-form-icon" uk-icon="icon: tag"></span>
+                <input class="uk-input" type="text" placeholder="Medication Name">
+            </div>
+
+            <hr class="uk-divider-icon">
+
+            <p>Days of the Week
+                <p>
+                    <div class="uk-margin uk-grid-small uk-child-width-auto uk-grid daysofweek">
+                        <label><input class="uk-checkbox" type="checkbox"> Sun</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Mon</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Tues</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Weds</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Thurs</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Fri</label>
+                        <label><input class="uk-checkbox" type="checkbox"> Sat</label>
+                    </div>
+
+                    <hr class="uk-divider-icon">
+                    <div class="dosage-wrapper clearfix">
+                        <div class="uk-form-controls dosage-type">
+                            <p>Dosage Type</p>
+                            <select class="uk-select dosage-select" id="form-horizontal-select">
+	                <option value="pill">Pill</option>
+	                <option value="liquid">Liquid</option>
+	                <option value="injection">Injection</option>
+	            </select>
+                        </div>
+
+                        <div class="uk-form-controls dosage-amount">
+                            <p>Dosage Amount</p>
+                            <select class="uk-select dosage-select" id="form-horizontal-select">
+	                <option>1</option>
+	                <option>2</option>
+	                <option>3</option>
+	            </select>
+                        </div>
+                    </div>
+
+                    <hr class="uk-divider-icon fix-this-space">
+
+                    <div class="uk-form-controls notify-me-when">
+                        <p>Notify Me</p>
+                        <select class="uk-select" id="form-horizontal-select">
+	                       <option>5 minutes before</option>
+	                       <option>10 minutes before</option>
+	                       <option>15 minutes before</option>
+	                       <option>30 minutes before</option>
+	                   </select>
+                    </div>
+                    <hr class="uk-divider-icon fix-this-space">
+                    <div class="button-holder">
+                        <button class="uk-button uk-button-default medication-button save-button" uk-toggle="target: medication-list.index" type="button">Save</button>
+                        <button class="uk-button uk-button-default medication-button cancel-button" uk-toggle="target: medication-list.index" type="button">Cancel</button>
+                        <button class="uk-button uk-button-default medication-button delete-list-button" uk-toggle="target: medication-list.index" type="button">Delete</button>
+                    </div>
+
+        </form>
+
+    </div>
+</div>

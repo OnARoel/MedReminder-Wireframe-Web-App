@@ -26,6 +26,11 @@
                 templateUrl: 'profile/profile.view.html',
                 controllerAs: 'vm'
             })
+            .when('/medication-list', {
+                controller: 'MedicationListController',
+                templateUrl: 'medication-list/medication-list.view.html',
+                controllerAs: 'vm'
+            })
             .otherwise({
                 redirectTo: '/login'
             });
