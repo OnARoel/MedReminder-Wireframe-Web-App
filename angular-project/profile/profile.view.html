@@ -59,8 +59,6 @@
     </div>
 </nav>
 
-<<<<<<< HEAD
-
 <!-- Profile card -->
 <div class="uk-card uk-card-default uk-width-1-2@m profile-card uk-position-center">
     <div class="uk-card-header">
@@ -70,7 +68,7 @@
             </div>
             <div class="uk-width-expand">
 
-                <h3 class="uk-card-title uk-margin-remove-bottom">{{vm.user.firstName}}  {{vm.user.lastName}}</h3>
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{vm.user.firstName}} {{vm.user.lastName}}</h3>
 
                 <!-- This is a button toggling the modal -->
                 <button class="uk-button uk-button-default uk-margin-small-right uk-position-top-right edit-button-profile" type="button" uk-toggle="target: #modal-example"><span class="uk-icon uk-margin-small-right edit-pencil" uk-icon="icon: pencil; ratio: 0.9"></span>Edit</button>
@@ -94,32 +92,17 @@
                                     <label class="uk-form-label uk-text-large" for="">Last Name</label>
                                     <input name="lastName" type="text" placeholder={{vm.user.lastName}} class="uk-form-width-medium">
                                     <!-- Update the user here with the values from the input boxes above -->
-                        <button class="uk-button uk-button-primary uk-position-bottom-left" type="button" uk-toggle="target: #modal-example">Save</button>
-                         <button class="uk-button uk-button-danger uk-position-bottom-right" type="button" uk-toggle="target: #modal-example">Cancel</button>
-                        </fieldset>
+                                    <button class="uk-button uk-button-primary uk-position-bottom-left" type="button" uk-toggle="target: #modal-example">Save</button>
+                                    <button class="uk-button uk-button-danger uk-position-bottom-right" type="button" uk-toggle="target: #modal-example">Cancel</button>
+                            </fieldset>
                         </form>
 
+                        </div>
                     </div>
-                </div>
 
+                </div>
             </div>
         </div>
+        <button class="uk-button uk-button-danger uk-button-large uk-position-bottom-center uk-text-large" type="button" ng-click="vm.deleteUser(user.id)">Delete Account</button>
     </div>
-        <button class="uk-button uk-button-danger uk-button-large uk-position-bottom-center uk-text-large" type="button" onclick=<a ng-click="vm.deleteUser(user.id)"></a>Delete Account</button>
-                        </fieldset>
-                        </form>
-
 </div>
-=======
-<h1>Hi {{vm.user.firstName}}!</h1>
-<p>You're logged in</p>
-<h3>All registered users:</h3>
-<li ng-repeat="user in vm.allUsers">
-    {{user.username}} ({{user.firstName}} {{user.lastName}}) - <a ng-click="vm.deleteUser(user.id)">Delete</a>
-</li>
-<ul>
-    <li>
-        {{vm.user.firstName}} ({{vm.user.lastName}}) - <a ng-click="vm.deleteUser(vm.user.id)">Delete</a>
-    </li>
-</ul>
->>>>>>> dbb486c947fa82b81eb9e01f093203fc867650ea
