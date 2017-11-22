@@ -14,6 +14,10 @@
     position: relative;
 }
 
+.form-group .form-control {
+    width: 375px;
+}
+
 .login-form {
     position: absolute;
     top: 51%;
@@ -111,8 +115,8 @@
 
 #close-login {
     position: relative;
-    top: 10px;
-    right: 10px;
+    top: 20px;
+    right: 20px;
 }
 
 .uk-modal-title.login {
@@ -211,6 +215,10 @@
     top: 210px;
 }
 
+.medication-button {
+    margin: 0px 15px;
+}
+
 /*homepage.html*/
 
 .daily-reminder {
@@ -284,12 +292,42 @@
     right: 10px;
 }
 
+
 /*profile.html*/
 
 .profile-card {
     position: relative;
-    height: 475px;
     width: 500px;
+}
+
+.delete-button-wrapper {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.uneditable-form {
+    text-align: center;
+    margin: 15px 0px -15px 0px;
+}
+
+.button-holder {
+    text-align: center;
+}
+
+.uneditable-form input {
+    margin-bottom: 1em;
+    padding: 5px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.edit-info-wrapper input {
+    margin-bottom: 1em;
+    padding: 5px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .edit-button-profile {
@@ -302,7 +340,7 @@
     border-radius: 500px;
     position: relative;
     font-size: 16px;
-    top: 25px;
+    top: 35px;
     right: 30px;
 }
 
@@ -316,10 +354,8 @@
 .medication-list-box {
     background: #0596CC;
     position: relative;
-    height: 525px;
     width: 900px;
-    top: 60px;
-    left: 290px;
+    margin: auto;
 }
 
 .medication-list-title {
@@ -328,54 +364,48 @@
     letter-spacing: 1px;
 }
 
-.med-card1 {
+.med-card {
     background: #46494C;
-    width: 850px;
-    height: 75px;
+    width: 100%;
+    display: flex;
+    margin: 5px 0px;
+    cursor: pointer;
 }
 
-.med-card2 {
+.add-med-card {
     background: #46494C;
-    width: 850px;
-    height: 75px;
-    position: relative;
-    top: 10px;
+    margin-top: 30px;
 }
 
-.med-card3 {
-    background: #46494C;
-    width: 850px;
-    height: 75px;
-    position: relative;
-    top: 20px;
+.add-card {
+    text-align: center;
+    width: 100%;
+    color: white;
+    padding: 20px;
 }
 
-.med-card4 {
-    background: #46494C;
-    width: 850px;
-    height: 75px;
-    position: relative;
-    top: 30px;
+.date-active {
+    color: #0596CC
 }
 
-.med-card5 {
-    background: #46494C;
-    width: 850px;
-    height: 75px;
-    position: relative;
-    top: 40px;
-}
 
 .med-info-card {
     color: #FFFFFF;
     position: relative;
-    bottom: 10px;
+    padding: 10px 0px;
+    width: 25%;
+    border-right: 1px solid white;
+}
+
+.med-info-card:last-child {
+    border-right: 0px solid white;
 }
 
 .edit-modal {
     top: 0px;
-    height: 1200px;
     width: 800px;
+    border-radius: 10px;
+    padding: 20px;
 }
 
 .start-date-cal {
@@ -393,26 +423,17 @@
 }
 
 .dosage-type {
-    position: relative;
-    width: 150px;
-    right: 145px;
+    float: left;
+    width: 50%;
 }
 
 .dosage-amount {
-    position: relative;
-    width: 150px;
-    left: 150px;
-    bottom: 85px;
+    float: right;
+    width: 50%;
 }
 
-.fix-this-space {
-    position: relative;
-    bottom: 80px;
-}
-
-.notify-me-when {
-    position: relative;
-    bottom: 85px;
+.dosage-select {
+    width: 200px;
 }
 
 .save-button {
@@ -423,8 +444,6 @@
     border-color: #7AA936;
     border-radius: 500px;
     position: relative;
-    top: -80px;
-    left: -140px;
     width: 125px;
     font-size: 16px
 }
@@ -437,9 +456,7 @@
     border-color: #46494C;
     border-radius: 500px;
     position: relative;
-    top: -80px;
-    left: 143px;
-    width: 100px;
+    width: 125px;
     font-size: 16px
 }
 
@@ -447,14 +464,9 @@
     color: #FFFFFF;
     position: relative;
     right: 280px;
+    top: 5px;
 }
 
-/*vanilla calendar*/
-
-html {
-    box-sizing: border-box;
-    font-size: 10px;
-}
 
 *,
 *:before,
@@ -481,116 +493,6 @@ h1 {
     text-align: center;
 }
 
-.cal__header button {
-    background: none;
-    border: 0;
-    outline: none;
-    color: inherit;
-    font: inherit;
-    line-height: normal;
-    overflow: visible;
-    padding: 0;
-    -webkit-appearance: button;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    cursor: pointer;
-}
-
-.cal button:active {
-    border-radius: 3px;
-    box-shadow: 0 0 0 2px rgba(10, 146, 151, 0.1)
-}
-
-.cal {
-    width: 100%;
-    max-width: 42rem;
-    margin: 0 auto;
-    background-color: #fff;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 4px 22px 0 rgba(0, 0, 0, 0.05);
-    border: solid 1px #e7e9ed;
-}
-
-.cal__header {
-    display: flex;
-    padding: 1.2rem 1.4rem;
-    align-items: center;
-}
-
-.cal__header svg {
-    fill: #0596CC;
-}
-
-.cal__header__label {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-}
-
-.cal__week {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #E7E9ED;
-}
-
-.cal__week span {
-    font-size: 1.2rem;
-    max-width: 14.28%;
-    padding: 1.2rem 1.4rem;
-    flex: 0 0 14.28%;
-    flex-direction: column;
-    text-transform: uppercase;
-    font-weight: bold;
-    text-align: center;
-}
-
-.cal__body {
-    display: flex;
-    flex-wrap: wrap;
-    background-color: #fafafa;
-}
-
-.cal__date {
-    background-color: #fff;
-    display: flex;
-    max-width: 14.28%;
-    flex: 0 0 14.28%;
-    flex-direction: column;
-    align-items: center;
-    padding: 1.2rem 0;
-    border-radius: 4px;
-}
-
-.cal__date--active:hover {
-    cursor: pointer;
-}
-
-.cal__date--today {
-    background-color: #0596CC;
-    color: #fff;
-}
-
-.cal__date--selected {
-    background-color: #E7E9ED;
-    color: #333;
-}
-
-.cal__date--disabled {
-    opacity: 0.5;
-}
-
-.cal__date--disabled:hover {
-    cursor: not-allowed;
-}
-
-.demo-picked {
-    text-align: center;
-}
-
-.demo-picked span {
-    font-weight: bold;
-}
 
 /*medication-schedule.html*/
 
@@ -799,7 +701,6 @@ h1 {
     border-radius: 500px;
     position: relative;
     font-size: 16px;
-    top: 40px;
 }
 
 .delete-button:hover {
@@ -815,7 +716,6 @@ h1 {
     letter-spacing: 1px;
     border-color: #F00;
     font-size: 16px;
-    top: -80px;
     border-radius: 500px;
 }
 
@@ -823,10 +723,4 @@ h1 {
     color: #F00;
     background: #FFFFFF;
     border-color: #F00;
-}
-
-.pagenotfound {
-    position: relative;
-    left: 350px;
-    top: 100px;
 }

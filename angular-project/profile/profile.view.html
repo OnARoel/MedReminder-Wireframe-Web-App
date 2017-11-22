@@ -35,13 +35,13 @@
                 </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#!/medication-list">
                     <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
                     <span class="nav-text">Medication List</span>
                 </a>
                     </li>
                     <li>
-                        <a href="#">
+                        <a href="#!/settings">
                     <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
                     <span class="nav-text">Settings</span>
                 </a>
@@ -59,12 +59,64 @@
     </div>
 </nav>
 
+<!-- Profile card -->
+<div class="uk-card uk-card-default uk-width-1-2@m profile-card uk-position-center">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="75" height="75" src="https://techieswag.com/wp-content/uploads/2016/11/profile-empty..jpg">
+            </div>
+            <div class="uk-width-expand">
 
-<h1>Hi {{vm.user.firstName}}!</h1>
-<p>You're logged in</p>
-<h3>All registered users:</h3>
-<ul>
-    <li>
-        {{vm.user.firstName}} ({{vm.user.lastName}}) - <a ng-click="vm.deleteUser(user.id)">Delete</a>
-    </li>
-</ul>
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{vm.user.firstName}} {{vm.user.lastName}}</h3>
+
+                <!-- This is a button toggling the modal -->
+                <button class="uk-button uk-button-default uk-margin-small-right uk-position-top-right edit-button-profile" type="button" uk-toggle="target: #modal-example"><span class="uk-icon uk-margin-small-right edit-pencil" uk-icon="icon: pencil; ratio: 0.9"></span>Edit</button>
+
+                <!-- This is the modal -->
+                <div id="modal-example" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body edit-modal" align="center">
+                        <h2 class="uk-modal-title">Edit Profile Information</h2>
+
+                        <form name="edit" class="uk-form uk-form-stacked">
+
+                            <fieldset data-uk-margin>
+                                <legend></legend>
+                                <p>Change your information then click 'Save'</p>
+                                <p class="uk-text-right"> </p>
+                                <div class="uk-form-row edit-info-wrapper">
+                                    <label class="uk-form-label uk-text-large" for="">Username</label>
+                                    <input name="username" type="text" value={{vm.user.username}} class="uk-form-width-medium" disabled>
+                                    <label class="uk-form-label uk-text-large" for="">First Name</label>
+                                    <input name="firstName" type="text" value={{vm.user.firstName}} class="uk-form-width-medium" id="edit-first">
+                                    <label class="uk-form-label uk-text-large" for="">Last Name</label>
+                                    <input name="lastName" type="text" value={{vm.user.lastName}} class="uk-form-width-medium" id="edit-last">
+                                    <hr class="uk-divider-icon">
+                                    <!-- Update the user here with the values from the input boxes above -->
+                                    <div class="button-holder">
+                                        <button class="uk-button uk-button-default medication-button save-button" ng-click="vm.updateCurrentUser()" uk-toggle="target: #modal-example" type="button">Save</button>
+                                        <button class="uk-button uk-button-default medication-button cancel-button" uk-toggle="target: #modal-example" type="button">Cancel</button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="uneditable-form">
+        <div class="uk-form-label uk-text-large" for="">Username</div>
+        <input name="username" type="text" value={{vm.user.username}} class="uk-form-width-medium" disabled>
+        <div class="uk-form-label uk-text-large" for="">First Name</div>
+        <input name="firstName" type="text" placeholder={{vm.user.firstName}} class="uk-form-width-medium" disabled>
+        <div class="uk-form-label uk-text-large" for="">Last Name</div>
+        <input name="lastName" type="text" placeholder={{vm.user.lastName}} class="uk-form-width-medium" disabled>
+    </div>
+    <hr class="uk-divider-icon">
+    <div class="delete-button-wrapper">
+        <button class="uk-button uk-button-default medication-button delete-list-button" type="button" ng-click="vm.deleteUser(vm.user.id)">Delete Account</button>
+    </div>
+</div>

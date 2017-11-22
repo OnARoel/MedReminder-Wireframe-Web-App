@@ -5,14 +5,14 @@
         .module('app')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['UserService', '$rootScope'];
+    ProfileController.$inject = ['UserService', '$location', '$rootScope'];
 
-    function ProfileController(UserService, $rootScope) {
+    function ProfileController(UserService, $location, $rootScope) {
         var vm = this;
 
         vm.user = null;
         vm.deleteUser = deleteUser;
-
+        vm.updateCurrentUser = updateCurrentUser;
         initController();
 
         function initController() {
@@ -26,10 +26,21 @@
                 });
         }
 
+        function updateCurrentUser() {
+            UserService.GetByUsername($rootScope.globals.currentUser.username)
+                .then(function (user) {
+                    vm.user = user;
+                    user.firstName = $("#edit-first").val();
+                    user.lastName = $("#edit-last").val();
+                    UserService.Update(vm.user);
+                    location.reload();
+                });
+        }
+
         function deleteUser(id) {
             UserService.Delete(id)
                 .then(function () {
-                    loadCurrentUser();
+                    $location.path('/login');
                 });
         }
     }
