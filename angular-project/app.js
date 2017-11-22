@@ -1,68 +1,70 @@
 (function () {
-        'use strict';
+    'use strict';
 
-        angular
-            .module('app', ['ngRoute', 'ngCookies'])
-            .config(config)
-            .run(run);
+    angular
+        .module('app', ['ngRoute', 'ngCookies'])
+        .config(config)
+        .run(run);
 
-        config.$inject = ['$routeProvider', '$locationProvider'];
+    config.$inject = ['$routeProvider', '$locationProvider'];
 
-        function config($routeProvider, $locationProvider) {
-            $routeProvider
-                .when('/', {
-                    controller: 'HomeController',
-                    templateUrl: 'home/home.view.html',
-                    controllerAs: 'vm'
-                })
+    function config($routeProvider, $locationProvider) {
+        $routeProvider
+            .when('/', {
+                controller: 'HomeController',
+                templateUrl: 'home/home.view.html',
+                controllerAs: 'vm'
+            })
 
-                .when('/login', {
-                    controller: 'LoginController',
-                    templateUrl: 'login/login.view.html',
-                    controllerAs: 'vm'
-                })
+            .when('/login', {
+                controller: 'LoginController',
+                templateUrl: 'login/login.view.html',
+                controllerAs: 'vm'
+            })
 
-                .when('/profile', {
-                    controller: 'ProfileController',
-                    templateUrl: 'profile/profile.view.html',
-                    controllerAs: 'vm'
-                })
-                .when('/messages', {
-                        controller: 'MessagesController',
-                        templateUrl: 'messages/messages.view.html',
-                        .when('/medication-list', {
-                            controller: 'MedicationListController',
-                            templateUrl: 'medication-list/medication-list.view.html',
-                            controllerAs: 'vm'
-                        })
-                        .when('/settings', {
-                            controller: 'SettingsController',
-                            templateUrl: 'settings/settings.view.html',
-                            controllerAs: 'vm'
-                        })
-                        .otherwise({
-                            redirectTo: '/login'
-                        });
-                    }
+            .when('/profile', {
+                controller: 'ProfileController',
+                templateUrl: 'profile/profile.view.html',
+                controllerAs: 'vm'
+            })
+            .when('/messages', {
+                controller: 'MessagesController',
+                templateUrl: 'messages/messages.view.html',
+                controllerAs: 'vm'
+            })
+            .when('/medication-list', {
+                controller: 'MedicationListController',
+                templateUrl: 'medication-list/medication-list.view.html',
+                controllerAs: 'vm'
+            })
+            .when('/settings', {
+                controller: 'SettingsController',
+                templateUrl: 'settings/settings.view.html',
+                controllerAs: 'vm'
+            })
+            .otherwise({
+                redirectTo: '/login'
+            });
+    }
 
-                    run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
+    run.$inject = ['$rootScope', '$location', '$cookies', '$http'];
 
-                    function run($rootScope, $location, $cookies, $http) {
-                        // keep user logged in after page refresh
-                        $rootScope.globals = $cookies.getObject('globals') || {};
-                        if ($rootScope.globals.currentUser) {
-                            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
-                        }
+    function run($rootScope, $location, $cookies, $http) {
+        // keep user logged in after page refresh
+        $rootScope.globals = $cookies.getObject('globals') || {};
+        if ($rootScope.globals.currentUser) {
+            $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
+        }
 
 
-                        $rootScope.$on('$locationChangeStart', function (event, next, current) {
-                            // redirect to login page if not logged in and trying to access a restricted page
-                            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
-                            var loggedIn = $rootScope.globals.currentUser;
-                            if (restrictedPage && !loggedIn) {
-                                $location.path('/login');
-                            }
-                        });
-                    }
+        $rootScope.$on('$locationChangeStart', function (event, next, current) {
+            // redirect to login page if not logged in and trying to access a restricted page
+            var restrictedPage = $.inArray($location.path(), ['/login']) === -1;
+            var loggedIn = $rootScope.globals.currentUser;
+            if (restrictedPage && !loggedIn) {
+                $location.path('/login');
+            }
+        });
+    }
 
-                })();
+})();

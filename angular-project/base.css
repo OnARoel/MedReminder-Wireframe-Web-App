@@ -99,6 +99,31 @@
     font-size: 16px;
 }
 
+.conversation-message.right {
+    float: right;
+    text-align: right;
+    background-color: #7aa936;
+}
+
+.conversation-message.left {
+    text-align: left;
+    background-color: #0598cc;
+}
+
+.conversation-content {
+    overflow-y: scroll;
+    height: 400px;
+}
+
+.conversation-message {
+    margin: 10px 10px;
+    padding: 1em;
+    color: white;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+
 .signup-button.login-signup:hover {
     color: #7AA936;
     background: #FFFFFF;
@@ -146,10 +171,6 @@
     color: #0596CC;
     background: #FFFFFF;
     border-color: #0596CC;
-}
-
-.uk-input {
-    border-radius: 500px;
 }
 
 .forgotpass {
@@ -600,28 +621,6 @@ h1 {
     height: 600px
 }
 
-.message1 {
-    position: relative;
-    top: 350px;
-    right: 50px;
-}
-
-.message2 {
-    position: relative;
-    top: 280px;
-}
-
-.message3 {
-    position: relative;
-    top: 430px;
-    right: 50px;
-}
-
-.foot-message {
-    position: relative;
-    top: 310px;
-}
-
 .friends-button {
     position: relative;
     color: #FFFFFF;
@@ -640,16 +639,42 @@ h1 {
     border-color: #7AA936;
 }
 
+.foot-message {
+    padding-top: 15px;
+    border-top: 1px solid #ececec;
+    display: flex;
+}
+
+input#input-message {
+    width: 100%;
+}
+
+.send-message-wrapper {
+    width: 90%;
+    padding-right: 1em;
+}
+
+.send-message {
+    padding: 15px;
+    border-radius: 10px;
+    height: 45px;
+    font-size: 18px;
+}
+
+
+.send-button-wrapper {
+    width: 10%;
+}
+
 .send-button {
-    position: relative;
-    color: #FFFFFF;
-    background: #0596CC;
-    letter-spacing: 1px;
-    border-color: #0596CC;
-    border-radius: 500px;
-    position: relative;
-    font-size: 16px;
-    top: 550px;
+    color: white;
+    background-color: #0596CC;
+    width: 100%;
+    border-radius: 10px;
+    height: 100%;
+    font-weight: 600;
+    font-size: 1.25em;
+
 }
 
 .send-button:hover {
