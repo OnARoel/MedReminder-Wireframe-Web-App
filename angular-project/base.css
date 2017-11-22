@@ -339,6 +339,7 @@
     background: #46494C;
     width: 100%;
     display: flex;
+    margin: 5px 0px;
     cursor: pointer;
 }
 
@@ -352,6 +353,10 @@
     width: 100%;
     color: white;
     padding: 20px;
+}
+
+.date-active {
+    color: #0596CC
 }
 
 

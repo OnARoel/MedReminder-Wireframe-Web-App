@@ -66,7 +66,8 @@
                                 id: 0
                             };
                             user.id = lastUser.id + 1;
-
+                            var medicationList = new Object();
+                            user.medications = medicationList;
                             // save to local storage
                             users.push(user);
                             setUsers(users);
