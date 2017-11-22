@@ -11,13 +11,12 @@
         var vm = this;
 
         vm.user = null;
-        vm.allUsers = [];
         vm.deleteUser = deleteUser;
+        vm.updateCurrentUser = updateCurrentUser;
         initController();
 
         function initController() {
             loadCurrentUser();
-            loadAllUsers();
         }
 
         function loadCurrentUser() {
@@ -27,10 +26,14 @@
                 });
         }
 
-        function loadAllUsers() {
-            UserService.GetAll()
-                .then(function (users) {
-                    vm.allUsers = users;
+        function updateCurrentUser() {
+            UserService.GetByUsername($rootScope.globals.currentUser.username)
+                .then(function (user) {
+                    vm.user = user;
+                    user.firstName = $("#edit-first").val();
+                    user.lastName = $("#edit-last").val();
+                    UserService.Update(vm.user);
+                    location.reload();
                 });
         }
 

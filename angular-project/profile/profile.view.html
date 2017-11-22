@@ -75,8 +75,8 @@
 
                 <!-- This is the modal -->
                 <div id="modal-example" uk-modal>
-                    <div class="uk-modal-dialog uk-modal-body">
-                        <h2 class="uk-modal-title uk-position-top-center">Edit Profile Information</h2>
+                    <div class="uk-modal-dialog uk-modal-body edit-modal" align="center">
+                        <h2 class="uk-modal-title">Edit Profile Information</h2>
 
                         <form name="edit" class="uk-form uk-form-stacked">
 
@@ -84,25 +84,39 @@
                                 <legend></legend>
                                 <p>Change your information then click 'Save'</p>
                                 <p class="uk-text-right"> </p>
-                                <div class="uk-form-row">
+                                <div class="uk-form-row edit-info-wrapper">
                                     <label class="uk-form-label uk-text-large" for="">Username</label>
                                     <input name="username" type="text" value={{vm.user.username}} class="uk-form-width-medium" disabled>
                                     <label class="uk-form-label uk-text-large" for="">First Name</label>
-                                    <input name="firstName" type="text" placeholder={{vm.user.firstName}} class="uk-form-width-medium">
+                                    <input name="firstName" type="text" value={{vm.user.firstName}} class="uk-form-width-medium" id="edit-first">
                                     <label class="uk-form-label uk-text-large" for="">Last Name</label>
-                                    <input name="lastName" type="text" placeholder={{vm.user.lastName}} class="uk-form-width-medium">
+                                    <input name="lastName" type="text" value={{vm.user.lastName}} class="uk-form-width-medium" id="edit-last">
+                                    <hr class="uk-divider-icon">
                                     <!-- Update the user here with the values from the input boxes above -->
-                                    <button class="uk-button uk-button-primary uk-position-bottom-left" type="button" uk-toggle="target: #modal-example">Save</button>
-                                    <button class="uk-button uk-button-danger uk-position-bottom-right" type="button" uk-toggle="target: #modal-example">Cancel</button>
+                                    <div class="button-holder">
+                                        <button class="uk-button uk-button-default medication-button save-button" ng-click="vm.updateCurrentUser()" uk-toggle="target: #modal-example" type="button">Save</button>
+                                        <button class="uk-button uk-button-default medication-button cancel-button" uk-toggle="target: #modal-example" type="button">Cancel</button>
+                                    </div>
+                                </div>
                             </fieldset>
                         </form>
 
-                        </div>
                     </div>
-
                 </div>
+
             </div>
         </div>
-        <button class="uk-button uk-button-danger uk-button-large uk-position-bottom-center uk-text-large" type="button" ng-click="vm.deleteUser(user.id)">Delete Account</button>
+    </div>
+    <div class="uneditable-form">
+        <div class="uk-form-label uk-text-large" for="">Username</div>
+        <input name="username" type="text" value={{vm.user.username}} class="uk-form-width-medium" disabled>
+        <div class="uk-form-label uk-text-large" for="">First Name</div>
+        <input name="firstName" type="text" placeholder={{vm.user.firstName}} class="uk-form-width-medium" disabled>
+        <div class="uk-form-label uk-text-large" for="">Last Name</div>
+        <input name="lastName" type="text" placeholder={{vm.user.lastName}} class="uk-form-width-medium" disabled>
+    </div>
+    <hr class="uk-divider-icon">
+    <div class="delete-button-wrapper">
+        <button class="uk-button uk-button-default medication-button delete-list-button" type="button" ng-click="vm.deleteUser(vm.user.id)">Delete Account</button>
     </div>
 </div>

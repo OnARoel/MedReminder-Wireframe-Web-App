@@ -297,8 +297,37 @@
 
 .profile-card {
     position: relative;
-    height: 475px;
     width: 500px;
+}
+
+.delete-button-wrapper {
+    text-align: center;
+    margin: 20px 0px;
+}
+
+.uneditable-form {
+    text-align: center;
+    margin: 15px 0px -15px 0px;
+}
+
+.button-holder {
+    text-align: center;
+}
+
+.uneditable-form input {
+    margin-bottom: 1em;
+    padding: 5px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+.edit-info-wrapper input {
+    margin-bottom: 1em;
+    padding: 5px;
+    height: 45px;
+    font-size: 18px;
+    margin-top: 5px;
 }
 
 .edit-button-profile {
@@ -311,7 +340,7 @@
     border-radius: 500px;
     position: relative;
     font-size: 16px;
-    top: 25px;
+    top: 35px;
     right: 30px;
 }
 
