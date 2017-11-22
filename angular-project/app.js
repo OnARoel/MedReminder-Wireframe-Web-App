@@ -1,4 +1,4 @@
-﻿(function () {
+(function () {
     'use strict';
 
     angular
@@ -26,6 +26,16 @@
                 templateUrl: 'profile/profile.view.html',
                 controllerAs: 'vm'
             })
+            .when('/medication-list', {
+                controller: 'MedicationListController',
+                templateUrl: 'medication-list/medication-list.view.html',
+                controllerAs: 'vm'
+            })
+            .when('/settings', {
+                controller: 'SettingsController',
+                templateUrl: 'settings/settings.view.html',
+                controllerAs: 'vm'
+            })
             .otherwise({
                 redirectTo: '/login'
             });
@@ -39,6 +49,7 @@
         if ($rootScope.globals.currentUser) {
             $http.defaults.headers.common['Authorization'] = 'Basic ' + $rootScope.globals.currentUser.authdata;
         }
+
 
         $rootScope.$on('$locationChangeStart', function (event, next, current) {
             // redirect to login page if not logged in and trying to access a restricted page
