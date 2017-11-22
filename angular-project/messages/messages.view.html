@@ -1,0 +1,126 @@
+﻿<nav class="uk-navbar-container uk-margin" uk-navbar>
+    <div class="navigation-wrapper">
+        <div class="uk-navbar-center navigation-bar whole-tool-bar">
+
+            <div align="center" class="homepage-logo">
+                <img src="assets/pill-prompt-transparent.png" alt="PillPrompt Logo" width="128" height="128">
+            </div>
+
+            <div class="toolbar">
+                <ul class="uk-navbar-nav">
+                    <li>
+                        <a href="#!/">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: home"></span>
+                            <span class="nav-text">Home</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#!/profile">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: user"></span>
+                    <span class="nav-text">Profile</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#!/messages">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: comments"></span>
+                    <span class="nav-text">Messages</span>
+                </a>
+                    </li>
+
+
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: calendar"></span>
+                    <span class="nav-text">Medication Schedule</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: list"></span>
+                    <span class="nav-text">Medication List</span>
+                </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: cog"></span>
+                    <span class="nav-text">Settings</span>
+                </a>
+                    </li>
+
+                    <li>
+                        <a href="#!/login">
+                    <span class="uk-icon uk-margin-small-right" uk-icon="icon: sign-out"></span>
+                    <span class="nav-text">Logout</span>
+                </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<div class="uk-card uk-card-default uk-width-1-2@m message-list">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <p class="uk-card-title uk-margin-remove-bottom">MESSAGE HISTORY</p>
+        </div>
+    </div>
+
+    <div class="uk-card uk-card-hover uk-card-body uk-card-body thor-pic">
+        <img width="35" height="35" src="messages/thor.png">
+        <div class="thor-name">
+            <p>Thor</p>
+        </div>
+    </div>
+
+    <div class="uk-card uk-card-hover uk-card-body uk-card-body thor-pic">
+        <img width="35" height="35" src="messages/ironman.png">
+        <div class="thor-name">
+            <p>Iron Man</p>
+        </div>
+    </div>
+
+    <div class="uk-card uk-card-hover uk-card-body uk-card-body thor-pic">
+        <img width="35" height="35" src="messages/deadpool.png">
+        <div class="thor-name">
+            <p>Deadpool</p>
+        </div>
+    </div>
+
+    <a class="uk-button uk-button-default uk-position-center friends-button" href="friends.html">Friends</a>
+</div>
+
+<div class="uk-card uk-card-default uk-width-1-2@m message-boxx uk-position-center">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="40" height="40" src="messages/thor.png">
+            </div>
+            <div class="uk-width-expand">
+                <h3 class="uk-card-title uk-margin-remove-bottom">Thor</h3>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="uk-card-body">
+        <!-- messages here -->
+        <div class="uk-margin">
+            <input class="uk-input uk-form-width-medium uk-position-right message1" type="text" placeholder="Hello Thor!" value="Hello Thor!" disabled>
+        </div>
+
+        <div class="uk-margin message2">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="This is me." value="Hi." disabled>
+        </div>
+
+        <div class="uk-margin uk-position-right message3">
+            <input class="uk-input uk-form-width-medium" type="text" placeholder="This is me." value="Nice to meet you." disabled>
+        </div>
+
+        <div class="uk-card-footer foot-message">
+            <div class="uk-margin">
+                <input class="uk-input" type="text" placeholder="Send a message">
+            </div>
+        </div>
+    </div>
+    <button class="=uk-button uk-button-default uk-position-right send-button">Send</button>
