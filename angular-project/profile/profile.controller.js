@@ -5,15 +5,14 @@
         .module('app')
         .controller('ProfileController', ProfileController);
 
-    ProfileController.$inject = ['UserService', '$rootScope'];
+    ProfileController.$inject = ['UserService', '$location', '$rootScope'];
 
-    function ProfileController(UserService, $rootScope) {
+    function ProfileController(UserService, $location, $rootScope) {
         var vm = this;
 
         vm.user = null;
         vm.allUsers = [];
         vm.deleteUser = deleteUser;
-
         initController();
 
         function initController() {
@@ -38,7 +37,7 @@
         function deleteUser(id) {
             UserService.Delete(id)
                 .then(function () {
-                    loadCurrentUser();
+                    $location.path('/login');
                 });
         }
     }

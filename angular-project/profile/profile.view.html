@@ -59,6 +59,58 @@
     </div>
 </nav>
 
+<<<<<<< HEAD
+
+<!-- Profile card -->
+<div class="uk-card uk-card-default uk-width-1-2@m profile-card uk-position-center">
+    <div class="uk-card-header">
+        <div class="uk-grid-small uk-flex-middle" uk-grid>
+            <div class="uk-width-auto">
+                <img class="uk-border-circle" width="75" height="75" src="https://techieswag.com/wp-content/uploads/2016/11/profile-empty..jpg">
+            </div>
+            <div class="uk-width-expand">
+
+                <h3 class="uk-card-title uk-margin-remove-bottom">{{vm.user.firstName}}  {{vm.user.lastName}}</h3>
+
+                <!-- This is a button toggling the modal -->
+                <button class="uk-button uk-button-default uk-margin-small-right uk-position-top-right edit-button-profile" type="button" uk-toggle="target: #modal-example"><span class="uk-icon uk-margin-small-right edit-pencil" uk-icon="icon: pencil; ratio: 0.9"></span>Edit</button>
+
+                <!-- This is the modal -->
+                <div id="modal-example" uk-modal>
+                    <div class="uk-modal-dialog uk-modal-body">
+                        <h2 class="uk-modal-title uk-position-top-center">Edit Profile Information</h2>
+
+                        <form name="edit" class="uk-form uk-form-stacked">
+
+                            <fieldset data-uk-margin>
+                                <legend></legend>
+                                <p>Change your information then click 'Save'</p>
+                                <p class="uk-text-right"> </p>
+                                <div class="uk-form-row">
+                                    <label class="uk-form-label uk-text-large" for="">Username</label>
+                                    <input name="username" type="text" value={{vm.user.username}} class="uk-form-width-medium" disabled>
+                                    <label class="uk-form-label uk-text-large" for="">First Name</label>
+                                    <input name="firstName" type="text" placeholder={{vm.user.firstName}} class="uk-form-width-medium">
+                                    <label class="uk-form-label uk-text-large" for="">Last Name</label>
+                                    <input name="lastName" type="text" placeholder={{vm.user.lastName}} class="uk-form-width-medium">
+                                    <!-- Update the user here with the values from the input boxes above -->
+                        <button class="uk-button uk-button-primary uk-position-bottom-left" type="button" uk-toggle="target: #modal-example">Save</button>
+                         <button class="uk-button uk-button-danger uk-position-bottom-right" type="button" uk-toggle="target: #modal-example">Cancel</button>
+                        </fieldset>
+                        </form>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+        <button class="uk-button uk-button-danger uk-button-large uk-position-bottom-center uk-text-large" type="button" onclick=<a ng-click="vm.deleteUser(user.id)"></a>Delete Account</button>
+                        </fieldset>
+                        </form>
+
+</div>
+=======
 <h1>Hi {{vm.user.firstName}}!</h1>
 <p>You're logged in</p>
 <h3>All registered users:</h3>
@@ -70,3 +122,4 @@
         {{vm.user.firstName}} ({{vm.user.lastName}}) - <a ng-click="vm.deleteUser(vm.user.id)">Delete</a>
     </li>
 </ul>
+>>>>>>> dbb486c947fa82b81eb9e01f093203fc867650ea
