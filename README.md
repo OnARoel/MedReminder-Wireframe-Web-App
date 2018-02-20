@@ -1,1 +1,1 @@
-Wireframe App for school (Created and Designed in groups). 
+Unfinished Wireframe project (Designed and created through groupwork in Class)
