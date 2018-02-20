@@ -1,2 +1,1 @@
-# superteam3
-For CIS3750
+Wireframe App for school (Created and Designed in groups). 
